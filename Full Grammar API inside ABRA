@@ -1,0 +1,105 @@
+------------------------------WELCOMET TO ABRA!-------------------------------------------------
+					
+_________WHAT'S NEW IN ABRA LANGUAGE:___________keynotes.keynotes__________________________________
+
+
+1:	CHECK OUT NOW WHAT'S NEW IN ABRA:
+		open up whats new in ABRA folder.
+
+2:	ALSO CHECK OUT LICENSE FOR FREE.....
+
+3:	ALSO AVAILIBLE ON OPEN SOURCE PROJECT ON GIT HUB:
+		https://www.github.com (search for Abrahim Zaman A)
+		https://www.facebook.com/abrahimzaman.pak (on facebook)
+		https://www.sourceforge.com/
+		https://www.ABRA.org/
+
+4:	IMPORTANT NOTE BEFOR READING ABRA - GRAMMAR AND ITS RULE:
+
+5:	ABRA - GRAMMAR AND ITS RULES (READ ONLY), ALSO SEE DOCUMENTATION FOR MORE INFO:
+	statements  : NEWLINE* statement (NEWLINE+ statement)* NEWLINE*
+
+
+6: statement		: KEYWORD:RETURN expr?
+					: KEYWORD:CONTINUE
+					: KEYWORD:BREAK
+					: expr
+
+7: expr        		: KEYWORD:VAR IDENTIFIER EQ expr
+            		: comp-expr ((KEYWORD:AND|KEYWORD:OR) comp-expr)*
+
+8: comp-expr   		: NOT comp-expr
+            		: arith-expr ((EE|LT|GT|LTE|GTE) arith-expr)*
+
+9: arith-expr 		: term ((PLUS|MINUS) term)*
+
+10: term       		: factor ((MUL|DIV) factor)*
+
+11: factor      	: (PLUS|MINUS) factor
+            		: power
+
+12: power       	: call (POW factor)*
+
+13: call        	: atom (LPAREN (expr (COMMA expr)*)? RPAREN)?
+
+14: atom        	: INT|FLOAT|STRING|IDENTIFIER
+            		: LPAREN expr RPAREN
+            		: list-expr
+            		: if-expr
+            		: for-expr
+            		: while-expr
+					: func-def
+
+15: list-expr   	: LSQUARE (expr (COMMA expr)*)? RSQUARE
+
+16: if-expr     	: KEYWORD:IF expr KEYWORD:THEN
+              		(statement if-expr-b|if-expr-c?)
+            		| (NEWLINE statements KEYWORD:END|if-expr-b|if-expr-c)
+
+17: if-expr-b   	: KEYWORD:ELIF expr KEYWORD:THEN
+             		(statement if-expr-b|if-expr-c?)
+            		| (NEWLINE statements KEYWORD:END|if-expr-b|if-expr-c)
+
+18: if-expr-c   	: KEYWORD:ELSE
+              		statement
+            		| (NEWLINE statements KEYWORD:END)
+
+19: for-expr    	: KEYWORD:FOR IDENTIFIER EQ expr KEYWORD:TO expr 
+              		(KEYWORD:STEP expr)? KEYWORD:THEN
+              		statement
+            		|(NEWLINE statements KEYWORD:END)
+
+20: while-expr  	: KEYWORD:WHILE expr KEYWORD:THEN
+              		statement
+            		| (NEWLINE statements KEYWORD:END)
+
+21: func-def    	: KEYWORD:FUN IDENTIFIER?
+              		LPAREN (IDENTIFIER (COMMA IDENTIFIER)*)? RPAREN
+              		(ARROW expr)
+            		| (NEWLINE statements KEYWORD:END)
+			
+			
+********************DOCUMENTED BY TEAM OF ABRAHIM ZAMAN A*******************************
+		
+#######################################THANKS FOR USING ABRA##################################################
+22: AUTHOR:||
+			|-ABRAHIM ZAMAN A,
+			|--CONTACT US-->
+			|----EMAIL: ABRAHIMZAMAN3@GMAIL.COM,
+			|----EMAIL: ABRAHIMZAMAN3@OUTLOOK.COM,
+			|----EMAIL: ABRAHIM.ZAMAN@YAHOO.COM,
+			|
+			|-ADDRESS-->
+			|----47 WAY, NEAR GRAND MOSQUE,
+			|----HASSA BALAKOT, MANSEHRA, 
+			|----KHYBER PAKHTUNKWA,PAKISTAN.
+			
+			**// COPYRIGHT NOTICE:
+			**// PLEASE READ LICENSE AGREEMENT OF ABRA LAND.
+			**// ALSO MAINTAIN OUR DOCS.
+			**// COPYRIGHT © 2019-20 BY ABRAHIM ZAMAN A.
+			**// ALL RIGHTS RESERVED.
+			**// THANKS FOR USING ABRA LAND.
+			***********************************************************************----
+			******************************EXIT*************************************----
+			***********************************************************************----
